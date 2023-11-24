@@ -36,13 +36,20 @@ public class Library {
     public void addBook(Book book) { // association
         books.add(book);
     }
+    
+    public void removeBook(Book book) { // association
+        books.remove(book);
+    } 
 
-    public void addLibrarian(Librarian librarian) { // association
+    public void hireLibrarian(Librarian librarian) { // association
         librarians.add(librarian);
+    }
+    
+    public void fireLibrarian(Librarian librarian) { // association
+        librarians.remove(librarian);
     }
 
     public void printDetails() {
-        System.out.println(name + " at " + address + " has the following books: ");
         for (Book b : books) {
             System.out.println("•) " + b.getTitle() + " - by " + b.getAuthor());
         }
